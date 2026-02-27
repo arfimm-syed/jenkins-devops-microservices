@@ -2,11 +2,11 @@
 
 //DECLARATIVE
 pipeline {
-agent {docker {image 'maven:3.9.12-eclipse-temurin-17'}}
+agent {docker { image 'node:25.7' } }
 stages {
 	stage('Build') {
 		steps {
-			sh 'mvn --version'
+			sh 'node --version'
 	    	echo "BUild"
 		}
 	}   
